@@ -29,7 +29,7 @@ form.addEventListener('submit', function(event) {
     
 
     atualizaTabela();
-    form.requestFullscreen();
+    form.reset()
 });
 
 /*Atualização da tabela*/
@@ -38,14 +38,14 @@ function atualizaTabela() {
 
 
     produtos.forEach((produto, index) => {
-        const linha = document.getElementById('tr');
+        const linha = document.createElement('tr');
 
         linha.innerHTML = `
             <td>${produto.nome}</td>
             <td>${produto.quantidade}</td>
             <td>
-                <button class="acao" onclick="entrada(${index})">+</buuton>
-                <buuton class="acao" onclick="saida"(${index})-</button>
+                <button class="acao" onclick="entrada(${index})">+</button>
+                <button class="acao" onclick="saida(${index})">-</button>
             </td>
         `;
 
