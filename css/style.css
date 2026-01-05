@@ -29,10 +29,10 @@ section{
 }
 form input{
     padding: 0.6rem;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 form button{
-    padding: 0.6rem;
+    padding: 0.6rem 1rem;
     cursor: pointer;
 }
 
