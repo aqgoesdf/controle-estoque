@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constrole de Estoque</title>
+    <meta name="description" content="Sistema de simples de controle de sstoque">
+    <meta name="author" content="AqGoEs">
     <link rel="stylesheet" href="css/style.css">
+    <title>Constrole de Estoque</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Controle de Estoque</h1>
+    </header>
+
+    <main>
+        <!--Cadastro dos produtos-->
+        <section class="cadastro">
+            <h2>Cadastrar Produtos</h2>
+            <form id="formProduto">
+                <input type="text" id="nome" placeholder="Nome do Produto">
+                <input type="number" id="quantidade" placeholder="Quantidade Inicial">
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="erro" class="erro"></p>
+        </section>
+
+        <!--Produtos Cadastrdos-->
+        <section class="lista">
+            <h2>Produtos Cadastrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produtos</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaPRodutos">
+                    <!--Listagem do produtos aqui!-->
+                </tbody>
+            </table>
+        </section>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>

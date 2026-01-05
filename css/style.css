@@ -1,1 +1,56 @@
 /*AqGoEs | Dev*/
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilo Global*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+header{
+    background: #0077ff;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+main{
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+section{
+    margin-bottom: 2rem;
+}
+form input{
+    padding: 0.6rem;
+    margin-left: 0.5rem;
+}
+form button{
+    padding: 0.6rem;
+    cursor: pointer;
+}
+
+.erro{
+    color: red;
+    margin-top: 0.5rem;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+button.acao{
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.2rem;
+}
