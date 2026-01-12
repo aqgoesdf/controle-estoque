@@ -3,7 +3,7 @@ const form = document.getElementById('formProduto');
 const erro = document.getElementById('erro');
 const tabela = document.getElementById('tabelaProdutos');
 
-let produtos = [];
+let produtos = JSON.parse(localStorage.getItem(`produtos`)) || [];
 
 
 
@@ -11,7 +11,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nome = document.getElementById('nome').value.trim();
-    const quantidade = Number(document.getElementById('quantidade').value)
+    const quantidade = Number(document.getElementById('quantidade').value);
 
     if(!nome || quantidade <= 0){
         erro.textContent = 'Preencha corretamente os dados';
