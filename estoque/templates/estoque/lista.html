@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+
+    <h1>Controle de estoque</h1>
+
+    <h2> Cadastrar Produtos</h2>
+
+    <form method="pos">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <hr>
+
+    <!--Campos dos produtos cadastradoss-->
+    <h2>Produtos Cadasatrados</h2>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Produtos</th>
+            <th>Quantidade</th>
+        </tr>    
+        
+        {% for Produto in produtos %}
+        <th>
+            <td>{{ produto.nome }}</td>
+            <td> {{ produto.quantidade}}</td>
+        </th>
+        {% empty %}
+
+        <tr>
+            <td colspan="2">Nenhum produtos cadastrado</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
